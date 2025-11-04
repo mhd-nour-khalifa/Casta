@@ -50,6 +50,20 @@ npm install
 npm start
 ```
 
+### iOS Native Setup (First Time Only)
+
+If you want to run the native iOS app:
+
+```bash
+# Install iOS dependencies
+cd ios
+pod install
+cd ..
+
+# Run on iOS simulator
+npm run ios
+```
+
 ### Run on Platform
 
 **iOS Simulator (Mac only):**
@@ -189,10 +203,21 @@ Casta/
 │       ├── company/            # 8 company screens
 │       └── shared/             # 5 shared screens
 │
+├── ios/                        # iOS native files
+│   ├── Casta.xcodeproj/        # Xcode project
+│   ├── Casta.xcworkspace/      # Xcode workspace
+│   ├── Casta/                  # iOS app source
+│   │   ├── AppDelegate.swift   # App entry point
+│   │   ├── Info.plist          # iOS configuration
+│   │   ├── Images.xcassets/    # App icons & splash
+│   │   └── Supporting/         # Supporting files
+│   ├── Podfile                 # CocoaPods dependencies
+│   └── Podfile.lock            # Locked dependencies
+│
 └── assets/                     # Images, fonts
 ```
 
-**Total:** 28 screens, 40+ files, ~3,000 lines of code
+**Total:** 28 screens, 80+ files (including iOS), ~6,500 lines of code
 
 ---
 
